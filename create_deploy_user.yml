@@ -1,0 +1,9 @@
+---
+- name: Create deploy user and add ssh-key
+  hosts: all
+  become: true
+  
+  tasks:
+    - name: Include create_deploy_user role
+      include_role:
+        name: create_deploy_user

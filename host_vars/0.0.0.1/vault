@@ -1,0 +1,4 @@
+vault_ansible_user: root
+vault_ansible_password: rootpassword
+vault_deploy_user_name: deploy
+vault_deploy_user_password: deploypassword

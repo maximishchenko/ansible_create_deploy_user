@@ -1,0 +1,15 @@
+- name: Validate deploy_user_name variable
+  ansible.builtin.assert:
+    that:
+      - deploy_user_name is defined
+      - deploy_user_name | length > 0
+    fail_msg: "Critical error: variable 'deploy_user_name' must be defined and non-empty!"
+    success_msg: "Variable check passed deploy_user_name"
+
+- name: Validate deploy_user_password
+  ansible.builtin.assert:
+    that:
+      - deploy_user_password is defined
+      - deploy_user_password | length > 0
+    fail_msg: "Critical error: variable 'deploy_user_password' must be defined and non-empty!"
+    success_msg: "Variable check passed deploy_user_password"

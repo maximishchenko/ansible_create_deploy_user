@@ -1,0 +1,13 @@
+- name: Configure SSH daemon
+  #become: true
+  lineinfile:
+    path: /etc/ssh/sshd_config
+    regexp: '^{{ item.key }}'
+    line: '{{ item.key }} {{ item.value }}'
+    state: present
+    create: yes
+  loop:
+    - { key: 'PermitRootLogin', value: 'no' }
+    - { key: 'PasswordAuthentication', value: 'no' }
+    - { key: 'AllowUsers', value: '{{ deploy_user_name }}' }
+  notify: Restart ssh

@@ -1,0 +1,6 @@
+- name: Install required packages
+  apt:
+    name:
+      - sudo
+      - bash
+  when: ansible_os_family == 'Debian'

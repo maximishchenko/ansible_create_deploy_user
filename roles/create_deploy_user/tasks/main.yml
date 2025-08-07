@@ -1,0 +1,15 @@
+---
+- name: Verify variables
+  ansible.builtin.include_tasks: includes/verify_vars.yml
+- name: Upgrade packages
+  ansible.builtin.include_tasks: includes/upgrade_packages.yml
+- name: Install requirements
+  ansible.builtin.include_tasks: includes/install_requirements.yml
+- name: Create deploy user
+  ansible.builtin.include_tasks: includes/create_deploy_user.yml
+- name: Add ssh-key
+  ansible.builtin.include_tasks: includes/add_ssh_key.yml
+- name: Clean packages
+  ansible.builtin.include_tasks: includes/clean_packages.yml
+- name: Setup SSH
+  ansible.builtin.include_tasks: includes/setup_ssh.yml
