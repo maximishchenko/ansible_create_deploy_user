@@ -27,13 +27,13 @@ Example
 You can run this playbook with make
 
 ```
-make create-deploy-user
+make setup
 ```
 
 For pass any inventory you can pass as parameters
 
 ```
-make create-deploy-user INVENTORY=inventory.cfg
+make setup INVENTORY=inventory.cfg
 ```
 
 License

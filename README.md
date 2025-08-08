@@ -31,13 +31,13 @@ cp ~/.ssh/id_rsa.pub files/agent_rsa.pub
 1. Run with ```Makefile```:
 
 ```shell
-make create-deploy-user
+make setup
 ```
 
 or your can pass path to inventory file with environment variable
 
 ```shell
-make create_deploy_user INVENTORY=inventory/my_inventory_file.cfg
+make setup INVENTORY=inventory/my_inventory_file.cfg
 ```
 
 2. Run Ansible Playbook directly
