@@ -1,6 +1,8 @@
-- name: Remove useless packages
+---
+- name: Clean apt cache
   apt:
     autoclean: yes
+    update_cache: no
 - name: Remove useless dependencies
   apt:
     autoremove: yes

@@ -1,7 +1,4 @@
-- name: debug
-  debug:
-    var: deploy_user_password
-
+---
 - name: Create deploy user
   user:
     name: "{{ deploy_user_name }}"

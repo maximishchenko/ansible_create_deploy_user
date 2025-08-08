@@ -1,3 +1,4 @@
+---
 - name: Add user authorized key
   authorized_key:
     user: deploy

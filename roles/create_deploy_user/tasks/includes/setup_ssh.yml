@@ -1,5 +1,5 @@
+---
 - name: Configure SSH daemon
-  #become: true
   lineinfile:
     path: /etc/ssh/sshd_config
     regexp: '^{{ item.key }}'

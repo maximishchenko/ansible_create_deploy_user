@@ -1,3 +1,4 @@
+---
 - name: Validate deploy_user_name variable
   ansible.builtin.assert:
     that:
