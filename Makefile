@@ -1,4 +1,4 @@
-INVENTORY ?= inventory/inventory.cfg
+INVENTORY ?= inventory/inventory.yml
 
 default: help
 
